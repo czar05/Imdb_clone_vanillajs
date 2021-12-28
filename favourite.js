@@ -2,7 +2,7 @@ let favm = document.getElementById("fav_movie");
 let favmovie = localStorage.getItem("favMovie");
 
 let savedMovie = JSON.parse(favmovie);
-console.log("fav movie", savedMovie);
+ console.log("fav movie", savedMovie);
 
 if (savedMovie == null) {
   favmovie = [];
@@ -20,11 +20,13 @@ if (savedMovie == null) {
   
   </li>
   <ul>`;
-    let Unfavourite = document.getElementById("unfav");
-    Unfavourite.addEventListener("click", function () {
-      localStorage.removeItem("favMovie");
-      var div = this.parentElement;
-      div.style.display = "none";
-    });
+    let Unfavouritelist = document.querySelectorAll("#unfav");
+    Unfavouritelist.forEach((unfav)=>{
+      unfav.addEventListener("click", function () {
+        localStorage.removeItem("favMovie");
+        
+      });
+    })
+    
   });
 }

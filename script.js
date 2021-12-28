@@ -31,7 +31,9 @@ search.addEventListener("input", (e) => {
       let favmovie = JSON.parse(localStorage.getItem('favMovie')) || [];
       localStorage.getItem('favMovie');
        
-    let fav = document.getElementById('fav');
+    let favlist = document.querySelectorAll('#fav');
+    favlist.forEach((fav)=>{
+       
     fav.addEventListener("click", function () {
       if(fav.innerHTML == "Favourite"){
         fav.innerHTML = "Unfavourite";
@@ -41,41 +43,38 @@ search.addEventListener("input", (e) => {
         // var div = this.parentElement;
         // div.style.display = "none";
        
-      }else{
-        fav.innerHTML = "Favourite";
-        localStorage.removeItem('favMovie');
       }
      
     });
-    
-    let detail = document.getElementById('detail');
-    let moviedetail = document.getElementById('movie-detail');
-    console.log(moviedetail);
-    detail.addEventListener('click', function(){
-      
-      
-      moviedetail.innerHTML += `<div class="card" style="width: 18rem;">
-      <img src="${imgsrc}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">${avatar}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>`
-    // setTimeout(() => {
-    //   location = location.href= 'movie.html';
-    //   window.location(location);
-    // }, 1000);
-     
     })
+
+    
+    
+    // let detail = document.getElementById('detail');
+    // let moviedetail = document.getElementById('movie-detail');
+    // console.log(moviedetail);
+    // detail.addEventListener('click', function(){
+      
+      
+    //   moviedetail.innerHTML += `<div class="card" style="width: 18rem;">
+    //   <img src="${imgsrc}" class="card-img-top" alt="...">
+    //   <div class="card-body">
+    //     <h5 class="card-title">${avatar}</h5>
+    //     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    //   </div>
+    //   <ul class="list-group list-group-flush">
+    //     <li class="list-group-item">An item</li>
+    //     <li class="list-group-item">A second item</li>
+    //     <li class="list-group-item">A third item</li>
+    //   </ul>
+    //   <div class="card-body">
+    //     <a href="#" class="card-link">Card link</a>
+    //     <a href="#" class="card-link">Another link</a>
+    //   </div>
+    // </div>`
+    
+     
+    // })
     //  });
   };
 
@@ -83,7 +82,3 @@ search.addEventListener("input", (e) => {
   
 });
 
-
-
-
-    
