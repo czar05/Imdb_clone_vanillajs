@@ -32,7 +32,7 @@ function movieDetails(event) {
 // this will fetch the api of words typed by the user whenever it enters the words in input tag
 search.addEventListener("input", (e) => {
   const fetchApi = async function () {
-    //  await fetch(`http://www.omdbapi.com/?t=${e.target.value}&apikey=${access_token}`)
+    //  await fetch(`https://www.omdbapi.com/?t=${e.target.value}&apikey=${access_token}`)
     // .then(response => response.json())
     // .then((data => {
     //   console.log(data);
