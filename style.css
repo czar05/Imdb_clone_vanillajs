@@ -2,6 +2,7 @@ html,body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color:darkcyan;
 }
 
 h1{
@@ -79,4 +80,29 @@ input[type=submit] {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
+}
+#fav-movie{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background-color: mediumpurple;
+}
+#fav-movie a{
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: black;
+}
+#fav-movie a:hover{
+  color: brown;
+}
+.dis{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around
+}
+.cen{
+ position: absolute;
+ left: 30%;
 }
