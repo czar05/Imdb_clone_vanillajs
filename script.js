@@ -38,7 +38,7 @@ search.addEventListener("input", (e) => {
     //   console.log(data);
     // data = JSON.parse();
     const response = await fetch(
-      `http://www.omdbapi.com/?t=${e.target.value}&apikey=${access_token}`
+      `https://www.omdbapi.com/?t=${e.target.value}&apikey=${access_token}`
     );
     const data = await response.json();
     console.log(data);
